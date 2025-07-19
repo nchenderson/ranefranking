@@ -1,7 +1,7 @@
 Package: ranefranking
 Type: Package
 Title: CBP Shrinkage Estimates of Small Domain Parameters
-Version: 0.3
+Version: 0.1
 Author: c(person("Nicholas", "Henderson", email = "nchender@umich.edu", role = c("cre", "aut")), person("Nicholas", "Hartman", email = "nhar@umich.edu", role = "aut"))
 Maintainer: Nicholas Henderson <nchender@umich.edu>
 Description: Computes robust ranking of random effects using ranking targeted estimation of fixed effects.
@@ -9,4 +9,3 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: true
 NeedsCompilation: no
-

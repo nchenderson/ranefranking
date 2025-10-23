@@ -72,10 +72,10 @@ RankingRegCoefEst <- function(y, X, ses, tau.sq, H=1, method="optim") {
           dvec <- as.numeric(gradgfn(beta.old, y=y, X=X, ses=ses, tau.sq=tau.sq))
 
           vecterm1 <- crossprod(XV, w1*VV*y + w2*dvec + (w2*VV*Xbeta.old)*afrac)
-          beta.new <- solve(XtVX, vecterm1)
+          beta.new <- as.numeric(solve(XtVX, vecterm1))
 
           ObjFnVals[k+1] <- Qfn(beta=beta.new, H=1, VV=VV)
-          BetaVals[k+1] <- beta.new
+          BetaVals[k+1,] <- beta.new
 
           ss.parchange <- sqrt(sum((beta.new - beta.old)*(beta.new - beta.old)))
           if(ss.parchange < tol) {

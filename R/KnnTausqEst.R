@@ -1,4 +1,6 @@
 KnnTausqEst <- function(y, X, ses, trim.quant=0, k = 1) {
+  ### a reasonable choice of trim.quant is also 0.025
+
   ### Note that this function will not work for the case
   ### when X only has a single intercept column
 
